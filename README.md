@@ -22,10 +22,10 @@ solutions for Homework 1 of the Data Mining course.
 - **Exceptions** 
 - **Built-ins** 
 - **Python Functionals**
-- **Regex and Parsing  (not done)
-- **XML (not done)
-- **Closures and Decorators  (not done)
-- **NumPy  (not done)
+- Regex and Parsing  (not done)
+- XML (not done)
+- Closures and Decorators  (not done)
+- NumPy  (not done)
 
 ### Problem 2: Algorithms
 - **Birthday Cake Candles**
