@@ -99,6 +99,14 @@ def count_substring(string, sub_string):
         if string[i:i+len(sub_string)] == sub_string:
             count += 1
     return count
+
+# What's Your Name?
+def print_full_name(first, last):
+    print(f"Hello {first} {last}! You just delved into python.")
+
+# Mutations
+def mutate_string(string, position, character):
+    return string[:position] + character + string[position+1:]
 # Capitalize!
 def solve(s):
     for x in s.split():
@@ -110,6 +118,95 @@ def solve(s):
 def average(array):
     distinct_set = set(array)
     return sum(distinct_set) / len(distinct_set)
+    
+#  Symmetric Difference
+if __name__ == '__main__':
+    m = int(input())
+    a = set(map(int, input().split()))
+    n = int(input())
+    b = set(map(int, input().split()))
+    for x in sorted(a.symmetric_difference(b)):
+        print(x)
+
+# Set .add()
+n = int(input())
+countries = set(input() for _ in range(n))
+print(len(countries))
+
+# Set .discard(), .remove() & .pop()
+n = int(input())
+s = set(map(int, input().split()))
+for _ in range(int(input())):
+    cmd = input().split()
+    if cmd[0] == "pop":
+        s.pop()
+    elif cmd[0] == "remove":
+        s.remove(int(cmd[1]))
+    elif cmd[0] == "discard":
+        s.discard(int(cmd[1]))
+print(sum(s))
+
+# Set .union() Operation
+input()
+a = set(map(int, input().split()))
+input()
+b = set(map(int, input().split()))
+print(len(a.union(b)))
+
+# Set .intersection() Operation
+input()
+a = set(map(int, input().split()))
+input()
+b = set(map(int, input().split()))
+print(len(a.intersection(b)))
+
+# Set .difference() Operation
+input()
+a = set(map(int, input().split()))
+input()
+b = set(map(int, input().split()))
+print(len(a.difference(b)))
+
+# Set .symmetric_difference() Operation
+input()
+a = set(map(int, input().split()))
+input()
+b = set(map(int, input().split()))
+print(len(a.symmetric_difference(b)))
+
+# Set Mutations
+input()
+a = set(map(int, input().split()))
+for _ in range(int(input())):
+    cmd, _ = input().split()
+    b = set(map(int, input().split()))
+    getattr(a, cmd)(b)
+print(sum(a))
+
+# The Captain's Room
+k = int(input())
+rooms = list(map(int, input().split()))
+single = set()
+multiple = set()
+for r in rooms:
+    if r in single:
+        multiple.add(r)
+    else:
+        single.add(r)
+print((single - multiple).pop())
+
+#  Check Subset
+for _ in range(int(input())):
+    input()
+    a = set(map(int, input().split()))
+    input()
+    b = set(map(int, input().split()))
+    print(a.issubset(b))
+
+# Check Strict Superset
+a = set(map(int, input().split()))
+print(all(a.issuperset(set(map(int, input().split()))) for _ in range(int(input()))))
+
 
 
 # --- 5. COLLECTIONS ---
